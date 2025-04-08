@@ -135,10 +135,10 @@ const Card = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-white rounded-2xl shadow-md p-4 border border-gray-200">{children}</div>
 );
 
-const CardContent = ({ children }: { children: React.ReactNode }) => (
-  <div className="space-y-3">{children}</div>
-);
-
+const CardContent = ({ children, className }: { children: React.ReactNode; className?: string }) => (
+    <div className={`space-y-3 ${className || ''}`}>{children}</div>
+  );
+  
 const Input = ({ placeholder, icon, value, onChange }: any) => (
   <div className="flex items-center border rounded-xl px-3 py-2 bg-gray-100">
     {icon && <span className="mr-2 text-gray-700">{icon}</span>}
@@ -206,14 +206,14 @@ export default function BusinessSimulationGame() {
             placeholder="Ім'я та прізвище"
             icon={<User className="w-4 h-4" />}
             value={userInfo.name}
-            onChange={e => setUserInfo({ ...userInfo, name: e.target.value })}
+            onChange={(e: { target: { value: any; }; }) => setUserInfo({ ...userInfo, name: e.target.value })}
           />
           <Input
             placeholder="Email"
             type="email"
             icon={<Mail className="w-4 h-4" />}
             value={userInfo.email}
-            onChange={e => setUserInfo({ ...userInfo, email: e.target.value })}
+            onChange={(e: { target: { value: any; }; }) => setUserInfo({ ...userInfo, email: e.target.value })}
           />
           <Button onClick={() => userInfo.name && userInfo.email && setShowIntro(true)}>Продовжити</Button>
         </div>

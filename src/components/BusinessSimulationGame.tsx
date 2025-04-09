@@ -43,7 +43,7 @@ const scenarios: Scenario[] = [
     description: 'Яке рішення приймеш?',
     emoji: '🧯🔧⚠️',
     options: [
-      { text: 'Ремонт (50 000 грн)', score: 10, cost: 50000 },
+      { text: 'Ремонт (50 000 грн)', score: 14, cost: 50000 },
       { text: 'Ігнорувати проблему', score: -5, cost: 0 },
       { text: 'Купити нове обладнання(300 000 грн)', score: 15, cost: 300000 }
     ]
@@ -94,7 +94,7 @@ const scenarios: Scenario[] = [
     emoji: '🔋🏃‍♂️📦',
     options: [
       { text: 'Придбати нове обладнання (300 000 грн)', score: 15, cost: 300000 },
-      { text: 'Упровадити 3 зміни (50 000 грн)', score: 8, cost: 50000 },
+      { text: 'Упровадити більшу кількість змін роботи(50 000 грн)', score: 14, cost: 50000 },
       { text: 'Відмовитись від нових замовлень', score: -5, cost: 0 }
     ]
   },
@@ -151,7 +151,7 @@ const Input = ({ placeholder, icon, value, onChange }: any) => (
   </div>
 );
 
-const INITIAL_CAPITAL = 1000000;
+const INITIAL_CAPITAL = 1400000;
 
 export default function BusinessSimulationGame() {
     const [step, setStep] = useState(-1);

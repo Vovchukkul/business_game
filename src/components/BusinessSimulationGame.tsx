@@ -151,7 +151,7 @@ const Input = ({ placeholder, icon, value, onChange }: any) => (
   </div>
 );
 
-const INITIAL_CAPITAL = 1400000;
+const INITIAL_CAPITAL = 1200000;
 
 export default function BusinessSimulationGame() {
     const [step, setStep] = useState(-1);
@@ -264,7 +264,7 @@ export default function BusinessSimulationGame() {
     return (
       <div className="p-6 text-center space-y-6">
         <h2 className="text-2xl font-bold">Дякуємо за гру, {userInfo.name}!</h2>
-        <p className="text-lg">Ваш загальний результат: {score} балів</p>
+        <p className="text-lg">Ваш загальний результат: {Math.ceil(score/10)} балів</p>
         <div className="pt-4">
           <table className="w-full text-sm border mt-4">
             <thead className="bg-gray-200">
@@ -274,7 +274,7 @@ export default function BusinessSimulationGame() {
               </tr>
             </thead>
             <tbody>
-              <tr><td className="border px-2 py-1">Капітал</td><td className="border px-2 py-1">{Math.ceil((capital + score * 100) / 10)} грн</td></tr>
+              <tr><td className="border px-2 py-1">Капітал</td><td className="border px-2 py-1">{(capital + score * 100)} грн</td></tr>
               <tr><td className="border px-2 py-1">Репутація</td><td className="border px-2 py-1">{Math.min(score, 100)}/100</td></tr>
               <tr><td className="border px-2 py-1">Якість продукції</td><td className="border px-2 py-1">{Math.min(score / 1.5, 100).toFixed(0)}/100</td></tr>
               <tr><td className="border px-2 py-1">Мотивація працівників</td><td className="border px-2 py-1">{Math.min(score / 2, 100).toFixed(0)}/100</td></tr>

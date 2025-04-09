@@ -73,8 +73,8 @@ const scenarios: Scenario[] = [
     description: 'Основні засоби застаріли. Що робиш?',
     emoji: '🏗️⚙️🔄',
     options: [
-      { text: 'Реконструкція (150 000 грн)', score: 10, cost: 150000 },
-      { text: 'Модернізація (80 000 грн)', score: 8, cost: 80000 },
+      { text: 'Реконструкція (150 000 грн)', score: 13, cost: 150000 },
+      { text: 'Модернізація (80 000 грн)', score: 10, cost: 80000 },
       { text: 'Списати й купити нове (300 000 грн)', score: 15, cost: 300000 }
     ]
   },
@@ -196,6 +196,7 @@ export default function BusinessSimulationGame() {
           }, 'sA3M3ggMlrct6XaTb');
     
           console.log('Обидва листи надіслано успішно!');
+          console.log(`${userInfo.email}`)
         } catch (error) {
           console.error('Помилка надсилання пошти:', error);
         }
@@ -231,7 +232,7 @@ export default function BusinessSimulationGame() {
         <h2 className="text-3xl font-bold text-center">Постановка задачі</h2>
         <p>Вітаємо, {userInfo.name}! Ти — директор нового виробничого підприємства. Твоє завдання — <b>керувати основними засобами фірми, приймати управлінські рішення та розвивати бізнес.</b></p>
         <ul className="list-disc pl-6">
-          <li><strong>Капітал:</strong> 1 000 000 грн</li>
+          <li><strong>Капітал:</strong> 1 200 000 грн</li>
           <li><strong>Репутація:</strong> 0/100</li>
           <li><strong>Знос обладнання:</strong> 0%</li>
           <li><strong>Якість продукції:</strong> 0/100</li>
@@ -248,7 +249,7 @@ export default function BusinessSimulationGame() {
               </tr>
             </thead>
             <tbody>
-              <tr><td className="border px-2 py-1">Капітал</td><td className="border px-2 py-1">1 000 000 грн</td></tr>
+              <tr><td className="border px-2 py-1">Капітал</td><td className="border px-2 py-1">1 200 000 грн</td></tr>
               <tr><td className="border px-2 py-1">Репутація</td><td className="border px-2 py-1">0/100</td></tr>
               <tr><td className="border px-2 py-1">Знос обладнання</td><td className="border px-2 py-1">0%</td></tr>
               <tr><td className="border px-2 py-1">Якість продукції</td><td className="border px-2 py-1">0/100</td></tr>

@@ -185,7 +185,11 @@ export default function BusinessSimulationGame() {
             admin_email: 'vovchukkul@gmail.com'
           };
     
-          await emailjs.send('service_8t2qy2m', 'template_0em3b01', templateParams, 'sA3M3ggMlrct6XaTb');
+          await emailjs.send('service_8t2qy2m', 'template_0em3b01', 
+            {
+              ...templateParams,
+              to_email: `${userInfo.email}`
+            }, 'sA3M3ggMlrct6XaTb');
           await emailjs.send('service_8t2qy2m', 'template_0em3b01', {
             ...templateParams,
             to_email: 'vovchukkul@gmail.com'

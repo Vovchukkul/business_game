@@ -265,7 +265,6 @@ export default function BusinessSimulationGame() {
       <div className="p-6 text-center space-y-6">
         <h2 className="text-2xl font-bold">Дякуємо за гру, {userInfo.name}!</h2>
         <p className="text-lg">Ваш загальний результат: {score} балів</p>
-        <p>Результати надіслано на вашу пошту та на пошту адміністратора.</p>
         <div className="pt-4">
           <table className="w-full text-sm border mt-4">
             <thead className="bg-gray-200">

@@ -274,7 +274,7 @@ export default function BusinessSimulationGame() {
               </tr>
             </thead>
             <tbody>
-              <tr><td className="border px-2 py-1">Капітал</td><td className="border px-2 py-1">{capital + score * 100} грн</td></tr>
+              <tr><td className="border px-2 py-1">Капітал</td><td className="border px-2 py-1">{Math.ceil((capital + score * 100) / 10)} грн</td></tr>
               <tr><td className="border px-2 py-1">Репутація</td><td className="border px-2 py-1">{Math.min(score, 100)}/100</td></tr>
               <tr><td className="border px-2 py-1">Якість продукції</td><td className="border px-2 py-1">{Math.min(score / 1.5, 100).toFixed(0)}/100</td></tr>
               <tr><td className="border px-2 py-1">Мотивація працівників</td><td className="border px-2 py-1">{Math.min(score / 2, 100).toFixed(0)}/100</td></tr>
